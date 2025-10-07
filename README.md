@@ -1,3 +1,5 @@
+https://medium.com/@phamtuanchip/top-30-interview-questions-and-answers-for-senior-web-developers-with-react-js-210190a6f847
+
 ---
 title: "React Js Coding Interview Questions & Answers 2025 - Asked by TOP Companies"
 description: "Crack your React interview! Explore top React Js coding interview questions with answers. Covers hooks, lifecycle, state, and performance tips."

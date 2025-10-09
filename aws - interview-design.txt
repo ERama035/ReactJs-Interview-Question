@@ -1,0 +1,3 @@
+aws : https://medium.com/@jetti.dinesh/enterprise-grade-aws-architecture-enhancing-security-high-availability-disaster-recovery-and-be947e10cf2b
+https://dev.to/onlyoneerin/understanding-high-availability-fault-tolerance-and-disaster-recovery-in-aws-an-overview-2o4p
+https://newsletter.simpleaws.dev/p/understanding-aws-high-availability-scalability

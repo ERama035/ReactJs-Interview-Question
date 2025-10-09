@@ -1,0 +1,199 @@
+java script:
+
+1) A closure is a function bundled together with references to its surrounding state, allowing it to access variables from its outer scope even after that scope has exited.
+When you define a function inside another function, the inner function has access to:
+
+Its own variables
+The variables of the outer function
+Global variables
+If the inner function is returned or passed elsewhere, it "remembers" the environment in which it was created. This preserved environment is called a closure.
+
+2) difference bet ween let and var :
+var is function-scoped and can be redeclared;
+let is block-scoped and cannot be redeclared in the same scope.
+
+Feature	var	let
+Scope	Function-scoped	Block-scoped (within {})
+Hoisting	Hoisted and initialized as undefined	Hoisted but not initialized
+Redeclaration	Can be redeclared in the same scope	Cannot be redeclared in the same scope
+Reassignment	Can be reassigned	Can be reassigned
+Global Object	Declared in global scope, becomes property of window	Does not become property of window
+
+3) 
+Es6 Feature	Description:
+--------------------------------
+Classes	Class-based OOP syntax
+Promises	Asynchronous programming
+Arrow Functions	Short, lexically-scoped functions
+let, const	Block-scoped variable declarations
+Default Parameters	Function parameters with default values
+Modules	Native import/export
+
+callbacks and promise ?..
+
+4) what is event loop in java script with precedence ?..
+The event loop lets JavaScript handle async operations by processing microtasks (like Promises) before macrotasks (like setTimeout), ensuring efficient and predictable execution order.
+
+callback vs promise vs Async/await:
+A callback is a function that is passed as an argument to another function and is executed after the first function completes its operation. 
+Callbacks are commonly used in JavaScript for handling asynchronous operations, such as making an HTTP request.
+
+A promise is an object that represents the eventual completion (or failure) of an asynchronous operation and its resulting value. 
+Promises provide a simpler way to handle asynchronous operations compared to callbacks by allowing you to chain multiple operations together 
+and handle errors in a more elegant way.
+
+types of promises  ?..
+
+
+Async/await is a more recent addition to JavaScript that provides a way to write asynchronous code that looks and behaves like synchronous code.
+It uses the async keyword to declare a function that returns a promise, and the await keyword to wait for a promise to resolve before continuing 
+with the execution. 
+
+async function getData() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const data = 'Some data';
+      resolve(data);
+    }, 1000);
+  });
+}
+
+async function main() {
+  const data = await getData();
+  console.log(data);
+}
+main();
+
+what is deep nesting java scipt ?..
+waht is object prototyping ?..
+
+what is event bubling and event capturing ?..
+
+
+what is curlly functions ?.. nested functions each return an new function to that 
+
+what is object restructing ?..
+for of loop ?..
+for-each vs for-in  
+
+fetch api vs axios ?..
+
+
+what is shallow copy vs deep copy ?..
+    shallow copy:
+	const original = { a: 1, b: { c: 2 } };
+    const shallowCopy = { ...original };
+	deep copy:
+	    const original = { a: 1, b: { c: 2 } };
+    const shallowCopy = Object.assign({}, original);
+
+map vs reduce ?..
+map -> transform each element 
+reduce -> aggregate/combine elements.
+
+-----------------------------------------------------------------
+
+
+react 
+functional hooks: with number of paramaters.
+usestate, use effect, useselector, usereducer, usememo , usecallback, usecontext, useref, userIMperativehandle, uselayoutEffect, useDebugValue
+
+class based lifecylce :
+order: constructor , componentDidmount, ComponentDidupdate, CompnentUnmounting
+
+can we use hooks in the class based component ?..
+
+can we assign var to the hooks ?..
+
+React is declarative js ?..
+
+Scenario : without using the ifelse statement , how to use useEffect based on the count.
+
+
+getderivedstatefromProps
+
+pure components ?.. 
+1) use React.PureComponent
+2) A Pure Component in React only re-renders when its props or state change, thanks to shallow comparison, helping improve performance and efficiency.
+
+what are contollered and not controlledcomponent ?..
+
+
+
+hoc components ?..
+A Higher-Order Component (HOC) in React is a function that takes a component/function 
+and returns a new component with extra capabilities, making it easy to share logic  and state, props etc 
+and features across your app.
+
+React.memo	Memoizes functional components	React (built-in)
+connect ->	Connects to Redux store	react-redux
+withRouter	-> Injects router props	react-router-dom v5
+withTranslation -> 	Injects translation functions	react-i18next
+withTheme	-> Injects theme props	styled-components, MUI
+
+-------------------------------------------------------------------
+redux: 
+reducer : takes an action (type), state 
+    and dispatch that actionwe get the result.
+	use selector we get the updated value.
+	
+redux: list of methods in reducers	
+slices : asynch, 
+reducer : 
+
+
+mapDispatchtoprops
+MapStateTOprops
+mapPropsToValues
+
+react lazy loading ?..
+react.lazy.
+
+react code splitting ?.. 
+
+
+what re react profilers , react portals , renderprops , 
+
+react will have pure functions ?..
+
+
+when to useRef hook ?..
+
+
+
+------------------------------------------------------------------
+html : list of meta tags, semantic
+
+css : flex and its properties
+1) box model
+2) positioning and relative
+
+java scipt:
+let vs var
+types of hosting.
+rest operator vs spread operator
+
+-------------------------------------------------------------------
+middleware : it allow to intercetp the changes.
+thunk : yes.
+saga :
+
+1) redux tool kit - > 
+
+
+when we prefer to use context api vs redux.
+
+when to use redux state or global state ?..
+
+global store (single source of store ) , reducers , 
+
+useDispatch vs useSelector ?..
+
+
+useEffect with depencency array ?..
+
+	
+	
+	
+	
+	

@@ -2,6 +2,16 @@ https://medium.com/@phamtuanchip/top-30-interview-questions-and-answers-for-seni
 
 example : https://www.bezkoder.com/react-hooks-redux-crud/
 
+youtube :
+https://www.youtube.com/watch?v=dAHTXKDsrZ8
+https://www.youtube.com/watch?v=lxFqj8TJiJE
+https://www.youtube.com/watch?v=Etpdn4N9-d4
+https://www.youtube.com/watch?v=afoK26auCXQ
+https://www.youtube.com/watch?v=ZRSetk_Fsu0
+https://www.youtube.com/watch?v=RST3p5C97E4
+https://www.youtube.com/watch?v=p1DEFpehCsw
+https://www.youtube.com/watch?v=RapcagVtB-0
+
 ---
 title: "React Js Coding Interview Questions & Answers 2025 - Asked by TOP Companies"
 description: "Crack your React interview! Explore top React Js coding interview questions with answers. Covers hooks, lifecycle, state, and performance tips."

@@ -169,20 +169,6 @@ react will have pure functions ?..
 when to useRef hook ?..
 
 
-
-------------------------------------------------------------------
-html : list of meta tags, semantic
-
-css : flex and its properties
-1) box model
-2) positioning and relative
-
-java scipt:
-let vs var
-types of hosting.
-rest operator vs spread operator
-
--------------------------------------------------------------------
 middleware : it allow to intercetp the changes.
 thunk : yes.
 saga :
@@ -200,3 +186,18 @@ useDispatch vs useSelector ?..
 
 
 useEffect with depencency array ?..
+
+
+------------------------------------------------------------------
+html : list of meta tags, semantic
+
+css : flex and its properties
+1) box model
+2) positioning and relative
+
+java scipt:
+let vs var
+types of hosting.
+rest operator vs spread operator
+
+-------------------------------------------------------------------

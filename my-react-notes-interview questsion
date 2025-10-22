@@ -116,10 +116,7 @@ order: constructor , componentDidmount, ComponentDidupdate, CompnentUnmounting
 		if(count < 5) return;
 		console.log('count is 5 or more');
 	},[count]);
-
-1) 
-2) mantram :hrim kamala vasinya swaha
-3) yantram : 
+ 
 
 
 7) pure components ?.. 

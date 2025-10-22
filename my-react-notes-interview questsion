@@ -29,25 +29,19 @@ let, const	Block-scoped variable declarations
 Default Parameters	Function parameters with default values
 Modules	Native import/export
 
-callbacks and promise ?..
 
 4) what is event loop in java script with precedence ?..
 The event loop lets JavaScript handle async operations by processing microtasks (like Promises) before macrotasks (like setTimeout), ensuring efficient and predictable execution order.
 
-callback vs promise vs Async/await:
-A callback is a function that is passed as an argument to another function and is executed after the first function completes its operation. 
-Callbacks are commonly used in JavaScript for handling asynchronous operations, such as making an HTTP request.
+5) callback vs promise vs Async/await:
+->A callback is a function that is passed as an argument to another function and is executed after the first function completes its operation. 
+and retunts an method or funtions
 
-A promise is an object that represents the eventual completion (or failure) of an asynchronous operation and its resulting value. 
-Promises provide a simpler way to handle asynchronous operations compared to callbacks by allowing you to chain multiple operations together 
-and handle errors in a more elegant way.
+-> A promise is an object that represents the eventual completion (or failure) of an asynchronous operation and its resulting value.
+and it retuns a values (or) promise object. Promises provide a simpler way to handle asynchronous operations compared to callbacks
+by allowing you to chain multiple operations together and handle errors in a more elegant way.
 
-types of promises  ?..
-
-
-Async/await is a more recent addition to JavaScript that provides a way to write asynchronous code that looks and behaves like synchronous code.
-It uses the async keyword to declare a function that returns a promise, and the await keyword to wait for a promise to resolve before continuing 
-with the execution. 
+-> Async/await is the await keyword to wait for a promise to resolve before continuing with the execution with the async keyword, that returns a promise.
 
 async function getData() {
   return new Promise((resolve, reject) => {
@@ -58,25 +52,39 @@ async function getData() {
   });
 }
 
-async function main() {
-  const data = await getData();
-  console.log(data);
-}
-main();
 
-what is deep nesting java scipt ?..
-waht is object prototyping ?..
-
-what is event bubling and event capturing ?..
+6) what is deep nesting java scipt ?..
+Nested functions are one funcion inside of another function.
+Defining a function inside another function
 
 
-what is curlly functions ?.. nested functions each return an new function to that 
+7) waht is object prototyping ?..
+The mechanisum in the java sciprt object inherit properties and methods from a "prototype" object. Every object in JavaScript has a built-in property, which is called its prototype.
+In JavaScript - objects inherit properties and methods from a "prototype" object, which forms a prototype chain
 
-what is object restructing ?..
-for of loop ?..
-for-each vs for-in  
+8) what is event bubling and event capturing ?..
 
-fetch api vs axios ?..
+-> Event bubling (child to parent) is the process when an event riggered on a child element propogates (bubles up) to its parenet elements in the DOM hierarchy.
+Example the button click on the DIV element , the event handlers on the button will trigger the DIV element in turn trigger the DIV block.
+
+-> Event Handling: The entire system of detecting, listening for, and responding to event
+
+-> Event Capturing: (parent to child) Direction: From the outermost element to the downwards to the target element.
+example : the button click on the DIV element both has event handlers, if clicking on the button will trigger the DIV element first , next button
+
+9) what is curlly functions ?.. 
+Currly functions are the nested function each of which takes a single arguments.
+
+10) what is object restructing ?..
+JavaScript is a feature that allows you to extract properties from objects and bind them to variables,other objects into distinct variables,
+
+
+11) for of loop  ?..for loop woth cont , var, map
+for-each vs for-in  ?.. both are for iterating the data-structure, a)for-each is used for callbacks b) for-in is used for looping the datastructure.
+
+12) fetch api vs axios ?..
+-> fetch api is an built-in java script api for making http requests, used for small applications, which returns Promises.
+-> Is A popular Third-party Javascript library for making http requests, used for larger applications, and returns Promises.
 
 
 what is shallow copy vs deep copy ?..
@@ -88,39 +96,41 @@ what is shallow copy vs deep copy ?..
     const shallowCopy = Object.assign({}, original);
 
 map vs reduce ?..
-map -> transform each element 
-reduce -> aggregate/combine elements.
+-> use when you want to transform to each element and get an new array -> map -> transform each element 
+-> use when you want to combine all elements into a single value -> reduce -> aggregate/combine elements.
 
 -----------------------------------------------------------------
-
-
 react 
-functional hooks: with number of paramaters.
+1) functional hooks: with number of paramaters.
 usestate, use effect, useselector, usereducer, usememo , usecallback, usecontext, useref, userIMperativehandle, uselayoutEffect, useDebugValue
 
-class based lifecylce :
+2) class based lifecylce :
 order: constructor , componentDidmount, ComponentDidupdate, CompnentUnmounting
 
-can we use hooks in the class based component ?..
+3) can we use hooks in the class based component ?.. no , we can use only in function components
+4) can we assign var to the hooks ?.. no
+5) React is declarative js ?.. yes
 
-can we assign var to the hooks ?..
+6) Scenario : without using the ifelse statement , how to use useEffect based on the count.
+	useEffect(()=>{
+		if(count < 5) return;
+		console.log('count is 5 or more');
+	},[count]);
 
-React is declarative js ?..
+1) 
+2) mantram :hrim kamala vasinya swaha
+3) yantram : 
 
-Scenario : without using the ifelse statement , how to use useEffect based on the count.
 
-
-getderivedstatefromProps
-
-pure components ?.. 
+7) pure components ?.. 
 1) use React.PureComponent
 2) A Pure Component in React only re-renders when its props or state change, thanks to shallow comparison, helping improve performance and efficiency.
 
-what are contollered and not controlledcomponent ?..
+8) what are contollered and not controlledcomponent ?..
+Controlled -> React Manages the avlues via state
+UnControlled
 
-
-
-hoc components ?..
+9) hoc components ?..
 A Higher-Order Component (HOC) in React is a function that takes a component/function 
 and returns a new component with extra capabilities, making it easy to share logic  and state, props etc 
 and features across your app.
@@ -145,6 +155,8 @@ reducer :
 mapDispatchtoprops
 MapStateTOprops
 mapPropsToValues
+getderivedstatefromProps ? ..
+
 
 react lazy loading ?..
 react.lazy.
@@ -191,9 +203,3 @@ useDispatch vs useSelector ?..
 
 
 useEffect with depencency array ?..
-
-	
-	
-	
-	
-	

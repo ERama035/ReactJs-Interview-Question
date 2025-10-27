@@ -177,15 +177,3 @@ disrupting application operations.
 48) Your organization is concerned about data protection and compliance. How could you ensure sensitive data is securely stored and transmitted?
 I would use Amazon S3 server-side encryption and Amazon RDS encryption at rest for data storage and SSL/TLS encryption for communication between services.
 
-
-
------------------------------------------- Resources : Aws zero to hero---------------------------------------------
-https://www.youtube.com/watch?v=qtkWHhikLh8
-https://intellipaat.com/blog/interview-question/amazon-aws-interview-questions/#no7
-https://cloudchamp.notion.site/AWS-Interview-questions-with-Answers-9f1f6740fc154c93b14d1fa77c7e86d6
-https://www.whizlabs.com/blog/aws-full-stack-developer-interview-questions/
-https://www.reddit.com/r/Medium/comments/15h6heo/how_to_access_premium_articles_for_free_in_medium/
----------------------------------------- aws infrastructure --------------------------------------------------------
-aws : https://medium.com/@jetti.dinesh/enterprise-grade-aws-architecture-enhancing-security-high-availability-disaster-recovery-and-be947e10cf2b
-https://dev.to/onlyoneerin/understanding-high-availability-fault-tolerance-and-disaster-recovery-in-aws-an-overview-2o4p
-https://newsletter.simpleaws.dev/p/understanding-aws-high-availability-scalability

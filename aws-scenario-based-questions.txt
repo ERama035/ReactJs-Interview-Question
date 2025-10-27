@@ -1,1 +1,126 @@
 
+https://www.youtube.com/watch?v=XOjji2deIoI : Aws ECS Scenario based interview questions
+
+----------------- Aws-scenario based ---------------------------------------------------
+https://github.com/iam-veeramalla/aws-devops-zero-to-hero/blob/main/day-8/Interview_q%26a
+32) Scenario Based Interview Questions on EC2, IAM and VPC
+
+1Q: You have been assigned to design a VPC architecture for a 2-tier application. The application needs to be highly available and scalable. 
+   How would you design the VPC architecture?
+
+A: In this scenario, I would design a VPC architecture in the following way.
+   I would create 2 subnets: public and private. The public subnet would contain the load balancers and be accessible from the internet. 
+   The private subnet would host the application servers. 
+   I would distribute the subnets across multiple Availability Zones for high availability. Additionally, I would configure auto scaling groups for 
+   the application servers.
+
+2Q: Your organization has a VPC with multiple subnets. You want to restrict outbound internet access for resources in one subnet, but allow outbound 
+  internet access for resources in another subnet. How would you achieve this?
+
+A: To restrict outbound internet access for resources in one subnet, we can modify the route table associated with that subnet. In the route table, 
+   we can remove the default route (0.0.0.0/0) that points to an internet gateway. 
+   This would prevent resources in that subnet from accessing the internet. For the subnet where outbound internet access is required, we can keep 
+   the default route pointing to the internet gateway.
+
+3Q: You have a VPC with a public subnet and a private subnet. Instances in the private subnet need to access the internet for software updates. 
+   How would you allow internet access for instances in the private subnet?
+
+A: To allow internet access for instances in the private subnet, we can use a NAT Gateway or a NAT instance. 
+   We would place the NAT Gateway/instance in the public subnet and configure the private subnet route table to send outbound traffic to the 
+   NAT Gateway/instance. This way, instances in the private subnet can access the internet through the NAT Gateway/instance.
+
+4Q: You have launched EC2 instances in your VPC, and you want them to communicate with each other using private IP addresses. 
+   What steps would you take to enable this communication?
+
+A: By default, instances within the same VPC can communicate with each other using private IP addresses. 
+  To ensure this communication, we need to make sure that the instances are launched in the same VPC and are placed in the same subnet or subnets 
+  that are connected through a peering connection or a VPC peering link. 
+  Additionally, we should check the security groups associated with the instances to ensure that the necessary inbound and outbound rules are 
+  configured to allow communication between them.
+
+5Q: You want to implement strict network access control for your VPC resources. How would you achieve this?
+
+A: To implement granular network access control for VPC resources, we can use Network Access Control Lists (ACLs). 
+  NACLs are stateless and operate at the subnet level. We can define inbound and outbound rules in the NACLs to allow or deny traffic based on source 
+  and destination IP addresses, ports, and protocols. 
+  By carefully configuring NACL rules, we can enforce fine-grained access control for traffic entering and leaving the subnets.
+
+6Q: Your application needs to access AWS services, such as S3 securely within your VPC. How would you achieve this?
+
+A: To securely access AWS services within the VPC, we can use VPC endpoints. VPC endpoints allow instances in the VPC to communicate with AWS services
+   privately, without requiring internet gateways or NAT gateways. 
+   We can create VPC endpoints for specific AWS services, such as S3 and DynamoDB, and associate them with the VPC. 
+   This enables secure and efficient communication between the instances in the VPC and the AWS services.
+
+7Q: What is the difference between NACL and Security groups ? Explain with a use case ?
+
+A: For example, I want to design a security architecture, I would use a combination of NACLs and security groups. At the subnet level, I would configure 
+   NACLs to enforce inbound and outbound traffic restrictions based on source and destination IP addresses, ports, and protocols. NACLs are stateless and 
+   can provide an additional layer of defense by filtering traffic at the subnet boundary.
+   At the instance level, I would leverage security groups to control inbound and outbound traffic. Security groups are stateful and operate at the instance
+   level. By carefully defining security group rules, I can allow or deny specific traffic to and from the instances based on the application's security requirements.
+   By combining NACLs and security groups, I can achieve granular security controls at both the network and instance level, providing defense-in-depth for the sensitive application.
+
+8Q: What is the difference between IAM users, groups, roles and policies ?
+
+A: IAM User: An IAM user is an identity within AWS that represents an individual or application needing access to AWS resources. IAM users have permanent long-term credentials, such as a username and password, or access keys (Access Key ID and Secret Access Key). IAM users can be assigned directly to IAM policies or added to IAM groups for easier management of permissions.
+   IAM Role: An IAM role is similar to an IAM user but is not associated with a specific individual. Instead, it is assumed by entities such as IAM users, applications, or services to obtain temporary security credentials. IAM roles are useful when you want to grant permissions to entities that are external to your AWS account or when you want to delegate access to AWS resources across accounts. IAM roles have policies attached to them that define the permissions granted when the role is assumed.
+   IAM Group: An IAM group is a collection of IAM users. By organizing IAM users into groups, you can manage permissions collectively. IAM groups make it easier to assign permissions to multiple users simultaneously. Users within an IAM group inherit the permissions assigned to that group. For example, you can create a "Developers" group and assign appropriate policies to grant permissions required for developers across your organization.
+   IAM Policy: An IAM policy is a document that defines permissions and access controls in AWS. IAM policies can be attached to IAM users, IAM roles, and IAM groups to define what actions can be performed on which AWS resources. IAM policies use JSON (JavaScript Object Notation) syntax to specify the permissions and can be created and managed independently of the users, roles, or groups. IAM policies consist of statements that include the actions allowed or denied, the resources on which the actions can be performed, and any additional conditions.
+
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+🔹 Question 1: You need to deploy a Docker application in ECS but want to minimize costs by sharing instances between multiple tasks. Which ECS launch type would you use and why?
+	answer: ec2
+
+🔹 Question 2: You are running a service on ECS Fargate, and your application is experiencing high network latency. How would you troubleshoot and optimize network performance?
+	Enable vpc flow logs , security groups and network ACLS , AWS cloudWatch metrics, Aws ECS with EC2 launch type.
+
+🔹 Question 3: You need to deploy a service on ECS and ensure zero downtime during deployments. How would you configure this?
+	ECS service code deply or ROlling updates with blue/green deployments and Ecs can replace old tasks with new ones incrementally.
+
+🔹 Question 4: Your ECS task is failing to start, and you need to investigate why. What steps would you take to identify and resolve the issue?
+	Check Any error in Ecs events , task definition , task Iam role.
+
+🔹 Question 5: You are tasked with scaling an ECS service up and down automatically based on the load. How would you configure this?
+	Ecs Service Auto Scaling, create auto scaling policies to increase the task count when cpu or memory utilization.
+	
+🔹 Question 6: You need to allow an ECS task to access an S3 bucket, but without storing access keys in the application. How would you configure this securely?
+    Attach an iam role to ecs task defination, which will help providing the temp credentails to access the S3 bucket , which will help hard coding the keys in code
+ 
+🔹 Question 7: Your application requires access to sensitive data, such as database passwords. How would you securely provide this data to ECS tasks? 
+	Aws seceret manager or aws System manager paramater store to store sensitive data , refere these secerts in the ecs task definition under the secrets paramater., 
+	ECS can pull the secrets from secrets Manager or paramater store at runtime use them in env variables without exposing them directly in the code.
+
+
+🔹 Question 8: You are asked to deploy an ECS service across multiple availability zones to ensure high availability. How would you configure this?
+	Multi-AZ VPC with subnets in each availability zone, spread across avilability zone to ensure taks are distrubuted evenly,
+	if using load balancer id configure it with target groups spanning multiple AZ's to distrubute incoming traffic across all zones.
+
+
+🔹 Question 9: Your ECS service has been configured with an Application Load Balancer (ALB), but some health checks are failing. What steps would you take to diagnose and resolve this issue?
+    ALB Targert groups settings, check security groups, ECS tasks and ALB, Cloud watch logs for ECs service to see if the 
+	application is responding to health check requests. verify ecs tasks is configured to listining ports.
+
+
+🔹 Question 10: You are running an ECS service with Fargate, and you need to ensure that specific tasks run on a periodic schedule. How would you set this up?
+	i would use the Amazon Event Bridge (formerly cloud watch Events) to create a schedule rule, this rule would trigger the ECS Fargate task on a specified interval 
+	(Every hour, daily, etc..) and it will automatly start the tsk according to the defined schedule
+
+
+------------------------------------------------------ minslineous ----------------------------------------------
+
+Q: Your organization requires an isolated environment within the VPC for running sensitive workloads. How would you set up this isolated environment?
+
+A: To set up an isolated environment within the VPC, we can create a subnet with no internet gateway attached. 
+   This subnet, known as an "isolated subnet," will not have direct internet connectivity. We can place the sensitive workloads in this subnet, ensuring
+   that they are protected from inbound and outbound internet traffic. 
+   However, if these workloads require outbound internet access, we can set up a NAT Gateway or NAT instance in a different subnet and configure the
+   isolated subnet's route table to send outbound traffic through the NAT Gateway/instance.
+   
+   
+q: we can create 100 buckets by default in s3 , yes
+q: if we delet the peer connection it will aslo get deleted in the other side, after that there will be no more traffic flow.	
+
+	https://www.minuteinbox.com/

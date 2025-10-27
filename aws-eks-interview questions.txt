@@ -1,1 +1,13 @@
 
+---------------------------------------------------- aws EKS interview questions ------------------------------
+https://www.youtube.com/watch?v=TPH5TAeZwg8
+🔹 Question 1: What is AWS EKS, and how does it simplify Kubernetes deployment?
+🔹 Question 2: How does EKS differ from self-managed Kubernetes clusters on AWS?
+🔹 Question 3: What is a Kubernetes cluster, and how is it structured in EKS?
+🔹 Question 4: How does EKS manage security for Kubernetes clusters?
+🔹 Question 5: What is the significance of a node group in EKS, and how does it relate to worker nodes?
+🔹 Question 6: How can you achieve high availability in an EKS cluster?
+🔹 Question 7: Can you integrate EKS with other AWS services, and if so, how?
+🔹 Question 8: What is the role of an EKS worker node, and how are they managed?
+🔹 Question 9: How does EKS handle updates and patches for the Kubernetes control plane?
+🔹 Question 10: What is the purpose of the Amazon EKS optimized AMI for worker nodes?

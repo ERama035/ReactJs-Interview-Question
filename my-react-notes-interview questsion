@@ -116,7 +116,8 @@ order: constructor , componentDidmount, ComponentDidupdate, CompnentUnmounting
 		if(count < 5) return;
 		console.log('count is 5 or more');
 	},[count]);
- 
+
+
 
 
 7) pure components ?.. 
@@ -168,7 +169,13 @@ react will have pure functions ?..
 
 when to useRef hook ?..
 
+--------------------------- java script questions---------------------------------------
+java scipt:
+let vs var
+types of hosting.
+rest operator vs spread operator
 
+-------------------------------------------------------------------
 middleware : it allow to intercetp the changes.
 thunk : yes.
 saga :
@@ -187,17 +194,13 @@ useDispatch vs useSelector ?..
 
 useEffect with depencency array ?..
 
-
-------------------------------------------------------------------
+------------SQl bases Questions ------------------------
+1) seconf maximum salary in an employee table
+2) having and group by clause
+	
+--------------------------- css questions---------------------------------------
 html : list of meta tags, semantic
 
 css : flex and its properties
 1) box model
 2) positioning and relative
-
-java scipt:
-let vs var
-types of hosting.
-rest operator vs spread operator
-
--------------------------------------------------------------------

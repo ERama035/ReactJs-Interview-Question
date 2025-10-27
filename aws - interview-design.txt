@@ -24,7 +24,6 @@ horizantal scaling: add more servers/ nodes this is better for high avilabily an
 security groups: applied at instance level , stateful (rembers traffic) , goes traffic to ec2
 Network Acls: applied at Subnet level, sateless (ruless must allow both in-bound and out-bound) , and control traffic to subnets.
 
-
 6) Amazon route 53 ensure high avilability and low latency ?..
 Route 53: DNS service routes end-user to aws resources or external servers
 high avilability and low latency via location and latency based routing
@@ -106,8 +105,11 @@ Amazon EC2, lambda , ECS, EKS , Aws Elastic Beanstack.
 
 
 23) which amazon services are used for the streaming services ?..
+---------------- Simpler verison ------------------------------------
+https://www.linkedin.com/pulse/scenario-based-aws-interview-questions-vikrant-virdi-xpvie/
 
 24) how do you optimize costs for a high-traffic aws application ?..
+
 
 25) How can you implement serverless authentication in an AWS application ?..
 
@@ -115,11 +117,65 @@ Amazon EC2, lambda , ECS, EKS , Aws Elastic Beanstack.
 27) AWS Single Sign-On (SSO) ?..
 28) AWS CloudFormation StackSets ?..
 29) Aws Database Migration Service (DMS) ?..
-30) strangler pattern for migration of  monolithic to micro services
+
 31) how elastic ip address work in aws ?..
 
----------------- Simpler verison ------------------------------------
-https://www.linkedin.com/pulse/scenario-based-aws-interview-questions-vikrant-virdi-xpvie/
+32 ) You have a microservices application that needs to scale dynamically based on traffic. How would you design an architecture for this using AWS services?
+amazon eks or ecs 
+33) your application database is experiencing the performance issues , how do you solve ?..
+amazon x ray - amazon RDS performance tools 
+34) migrating the monlothic to microservice ?..
+strangler pattern for migration of  monolithic to micro services
+
+35 ) Your team is frequently encountering configuration drift issues in your infrastructure. How could you prevent and manage this effectively?
+I will use aws cloud formation templates or terraform for implementing the Infrastructure as Service.
+
+36 ) Your company is launching a new product, and you expect a sudden spike in traffic. How would you ensure the application remains responsive and available?
+I would implement a combination of 
+auto-scaling groups, 
+Amazon CloudFront for content delivery, 
+Amazon RDS read replicas, and 
+Amazon DynamoDB provisioned capacity to handle increased load while maintaining performance.
+
+37) Your team wants to ensure secure access to AWS resources for different team members.
+I would use AWS Identity and Access Management (IAM) to create fine-grained policies for each team member.
+IAM roles and groups can be assigned permissions based on least privilege principles.
+
+38) You're managing a complex microservices architecture with multiple services communicating. How could you monitor and trace requests across services?
+ AWS X-Ray into the application to trace requests as they traverse services
+ 
+39) Your application has a front-end hosted on S3, and you need to enable HTTPS for security. How would you achieve this ?..
+I would use Amazon CloudFront to distribute content from the S3 bucket, configure a custom domain, and associate an SSL/TLS certificate through AWS Certificate Manager.
+
+40) Your organization has multiple AWS accounts for different environments (dev, staging, prod). How would you manage centralized billing and ensure cost optimization?
+I would use AWS Organizations to manage multiple accounts and enable consolidated billing. AWS Cost Explorer and AWS Budgets could be used to monitor and optimize costs across accounts.
+ 
+41) run resource-intensive tasks in the background. How could you ensure efficient and scalable task processing?
+I would use AWS Lambda for serverless background processing or AWS Batch for batch processing
+
+42) Your organization wants to enable single sign-on (SSO) for multiple AWS accounts ?..
+I would use AWS Single Sign-On (SSO) to manage user access across multiple AWS accounts.
+
+43) Your company is aiming for high availability by deploying applications across multiple regions. How could you implement global traffic distribution?
+I would use Amazon Route 53 with Latency-Based Routing or Geolocation Routing to direct traffic to the closest.
+
+44) Your application needs to store and retrieve large amounts of unstructured data. How could you design a cost-effective solution?
+I would use Amazon S3 with appropriate storage classes (such as S3 Standard or S3 Intelligent-Tiering) based on data access patterns.
+This allows for durable and cost-effective storage of unstructured data.
+
+45) Your team wants to enable automated testing for infrastructure deployments. How could you achieve this?
+I would integrate AWS CloudFormation StackSets into the CI/CD pipeline. 
+StackSets allow you to deploy infrastructure templates to multiple accounts
+
+46)AWS Lambda functions, and you want to improve cold start performance. How could you address this challenge?
+I will implement an Amazon API Gateway with the HTTP proxy integration, creating a warm-up endpoint that periodically invokes Lambda functions to keep them warm.
+
+47) multiple microservices, each with its own database. How could you manage database schema changes efficiently?
+I would use AWS Database Migration Service (DMS) to replicate data between the old and new schema versions, allowing for seamless database migrations without 
+disrupting application operations.
+
+48) Your organization is concerned about data protection and compliance. How could you ensure sensitive data is securely stored and transmitted?
+I would use Amazon S3 server-side encryption and Amazon RDS encryption at rest for data storage and SSL/TLS encryption for communication between services.
 
 -----------------harder version --------------------------------------
 https://github.com/iam-veeramalla/aws-devops-zero-to-hero/blob/main/day-8/Interview_q%26a
@@ -188,7 +244,74 @@ A: IAM User: An IAM user is an identity within AWS that represents an individual
    IAM Group: An IAM group is a collection of IAM users. By organizing IAM users into groups, you can manage permissions collectively. IAM groups make it easier to assign permissions to multiple users simultaneously. Users within an IAM group inherit the permissions assigned to that group. For example, you can create a "Developers" group and assign appropriate policies to grant permissions required for developers across your organization.
    IAM Policy: An IAM policy is a document that defines permissions and access controls in AWS. IAM policies can be attached to IAM users, IAM roles, and IAM groups to define what actions can be performed on which AWS resources. IAM policies use JSON (JavaScript Object Notation) syntax to specify the permissions and can be created and managed independently of the users, roles, or groups. IAM policies consist of statements that include the actions allowed or denied, the resources on which the actions can be performed, and any additional conditions.
 
------------------------------------------------------- minslineous ----------------------------------
+---------------------------------------------------- aws EKS interview questions ------------------------------
+https://www.youtube.com/watch?v=TPH5TAeZwg8
+🔹 Question 1: What is AWS EKS, and how does it simplify Kubernetes deployment?
+🔹 Question 2: How does EKS differ from self-managed Kubernetes clusters on AWS?
+🔹 Question 3: What is a Kubernetes cluster, and how is it structured in EKS?
+🔹 Question 4: How does EKS manage security for Kubernetes clusters?
+🔹 Question 5: What is the significance of a node group in EKS, and how does it relate to worker nodes?
+🔹 Question 6: How can you achieve high availability in an EKS cluster?
+🔹 Question 7: Can you integrate EKS with other AWS services, and if so, how?
+🔹 Question 8: What is the role of an EKS worker node, and how are they managed?
+🔹 Question 9: How does EKS handle updates and patches for the Kubernetes control plane?
+🔹 Question 10: What is the purpose of the Amazon EKS optimized AMI for worker nodes?
+
+--------------------------------------------------- aws ECS interview questions -------------------------------
+https://www.youtube.com/watch?v=aunRWSOkmRc
+
+🔹 Question 1: What is AWS ECS, and how does it differ from other container orchestration services?
+🔹 Question 2: What is a task definition in AWS ECS?
+🔹 Question 3: Explain the difference between a task and a service in AWS ECS.
+🔹 Question 4: Can ECS be integrated with other AWS services?
+🔹 Question 5: What is the purpose of ECS Fargate, and how does it differ from ECS on EC2 instances?
+🔹 Question 6: Explain the role of ECS clusters.
+🔹 Question 7: How does ECS manage container networking, and what is a task IAM role?
+🔹 Question 8: How does ECS handle container placement within a cluster?
+🔹 Question 9: What is ECS Auto Scaling, and how does it work?
+🔹 Question 10: How can you achieve high availability in ECS services?
+
+https://www.youtube.com/watch?v=XOjji2deIoI : Aws ECS Scenario based interview questions
+
+🔹 Question 1: You need to deploy a Docker application in ECS but want to minimize costs by sharing instances between multiple tasks. Which ECS launch type would you use and why?
+	answer: ec2
+
+🔹 Question 2: You are running a service on ECS Fargate, and your application is experiencing high network latency. How would you troubleshoot and optimize network performance?
+	Enable vpc flow logs , security groups and network ACLS , AWS cloudWatch metrics, Aws ECS with EC2 launch type.
+
+🔹 Question 3: You need to deploy a service on ECS and ensure zero downtime during deployments. How would you configure this?
+	ECS service code deply or ROlling updates with blue/green deployments and Ecs can replace old tasks with new ones incrementally.
+
+🔹 Question 4: Your ECS task is failing to start, and you need to investigate why. What steps would you take to identify and resolve the issue?
+	Check Any error in Ecs events , task definition , task Iam role.
+
+🔹 Question 5: You are tasked with scaling an ECS service up and down automatically based on the load. How would you configure this?
+	Ecs Service Auto Scaling, create auto scaling policies to increase the task count when cpu or memory utilization.
+	
+🔹 Question 6: You need to allow an ECS task to access an S3 bucket, but without storing access keys in the application. How would you configure this securely?
+    Attach an iam role to ecs task defination, which will help providing the temp credentails to access the S3 bucket , which will help hard coding the keys in code
+ 
+🔹 Question 7: Your application requires access to sensitive data, such as database passwords. How would you securely provide this data to ECS tasks? 
+	Aws seceret manager or aws System manager paramater store to store sensitive data , refere these secerts in the ecs task definition under the secrets paramater., 
+	ECS can pull the secrets from secrets Manager or paramater store at runtime use them in env variables without exposing them directly in the code.
+
+
+🔹 Question 8: You are asked to deploy an ECS service across multiple availability zones to ensure high availability. How would you configure this?
+	Multi-AZ VPC with subnets in each availability zone, spread across avilability zone to ensure taks are distrubuted evenly,
+	if using load balancer id configure it with target groups spanning multiple AZ's to distrubute incoming traffic across all zones.
+
+
+🔹 Question 9: Your ECS service has been configured with an Application Load Balancer (ALB), but some health checks are failing. What steps would you take to diagnose and resolve this issue?
+    ALB Targert groups settings, check security groups, ECS tasks and ALB, Cloud watch logs for ECs service to see if the 
+	application is responding to health check requests. verify ecs tasks is configured to listining ports.
+
+
+🔹 Question 10: You are running an ECS service with Fargate, and you need to ensure that specific tasks run on a periodic schedule. How would you set this up?
+	i would use the Amazon Event Bridge (formerly cloud watch Events) to create a schedule rule, this rule would trigger the ECS Fargate task on a specified interval 
+	(Every hour, daily, etc..) and it will automatly start the tsk according to the defined schedule
+
+
+------------------------------------------------------ minslineous ----------------------------------------------
 
 Q: Your organization requires an isolated environment within the VPC for running sensitive workloads. How would you set up this isolated environment?
 
@@ -197,7 +320,12 @@ A: To set up an isolated environment within the VPC, we can create a subnet with
    that they are protected from inbound and outbound internet traffic. 
    However, if these workloads require outbound internet access, we can set up a NAT Gateway or NAT instance in a different subnet and configure the
    isolated subnet's route table to send outbound traffic through the NAT Gateway/instance.
+   
+   
+q: we can create 100 buckets by default in s3 , yes
+q: if we delet the peer connection it will aslo get deleted in the other side, after that there will be no more traffic flow.	
 
+	https://www.minuteinbox.com/
 
 ------------------------------------------ Resources : Aws zero to hero---------------------------------------------
 https://www.youtube.com/watch?v=qtkWHhikLh8

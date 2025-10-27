@@ -1,1 +1,14 @@
 
+--------------------------------------------------- aws ECS interview questions -------------------------------
+https://www.youtube.com/watch?v=aunRWSOkmRc
+
+🔹 Question 1: What is AWS ECS, and how does it differ from other container orchestration services?
+🔹 Question 2: What is a task definition in AWS ECS?
+🔹 Question 3: Explain the difference between a task and a service in AWS ECS.
+🔹 Question 4: Can ECS be integrated with other AWS services?
+🔹 Question 5: What is the purpose of ECS Fargate, and how does it differ from ECS on EC2 instances?
+🔹 Question 6: Explain the role of ECS clusters.
+🔹 Question 7: How does ECS manage container networking, and what is a task IAM role?
+🔹 Question 8: How does ECS handle container placement within a cluster?
+🔹 Question 9: What is ECS Auto Scaling, and how does it work?
+🔹 Question 10: How can you achieve high availability in ECS services?

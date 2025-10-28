@@ -1,1 +1,14 @@
 
+Aws ecs example :
+https://www.youtube.com/watch?v=ARGmrYFfv44
+
+
+Example usage of server less computing are below
+	1) File processing :
+	https://medium.com/qantas-engineering-blog/serverless-task-runner-spring-boot-on-fargate-ecce1a646758
+	Lambda fails because of the high computation 
+	
+	2) Key rotation with lambda
+	3) SSO based applications can also deploy in ECS
+
+

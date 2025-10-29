@@ -1,1 +1,5 @@
-https://www.interviewbit.com/system-design-interview-questions/
+-------------------- interview system design questsion and asnwers ---------------
+Questions with examples : https://www.interviewbit.com/system-design-interview-questions/
+
+Answers: https://github.com/ERama035/awesome-system-design-resources
+

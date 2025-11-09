@@ -204,3 +204,10 @@ html : list of meta tags, semantic
 css : flex and its properties
 1) box model
 2) positioning and relative
+
+--------------------------React js local practise ---------------------------
+
+react hooks with firebase :
+https://www.bezkoder.com/react-hooks-firestore/
+redux tool kit with RDBMS:
+https://www.bezkoder.com/redux-toolkit-example-crud/

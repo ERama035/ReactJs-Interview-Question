@@ -5,9 +5,3 @@ how to implement idempotency in kafka in spring boot
 kafka vs rabbit mq:
 https://www.youtube.com/watch?v=w8xWTIFU4C8
 
-
-
-react hooks with firebase :
-https://www.bezkoder.com/react-hooks-firestore/
-redux tool kit with RDBMS:
-https://www.bezkoder.com/redux-toolkit-example-crud/

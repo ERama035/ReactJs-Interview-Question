@@ -345,9 +345,11 @@ https://www.youtube.com/shorts/L0DWAVbdEaM
 https://www.youtube.com/watch?v=MN8QVG3aW1s
 
 32) ------ React functioanl based interview questions -------
-
-https://www.youtube.com/watch?v=afoK26auCXQ&t=33s
-https://www.youtube.com/watch?v=qjUAAC1xnvI
+33) Your React app suddenly becomes slow after adding new features. How do you find and fix the issue?
+34) How do you prevent a login page from being accessible after the user is logged in?
+35) How do yồu handle API errors gracefully in the UI?
+36) A component is fetching the same data multiple times unnecessarily. How do you fix it?
+37) How do you optimize bundle size in a large React app?
 
 --------------------------- css questions---------------------------------------
 css : flex and its properties

@@ -142,71 +142,209 @@ reducer : takes an action (type), state
 	use selector we get the updated value.
 	
 13) redux: list of methods in reducers	
-slices : asynch, 
-reducer : 
+Reducers (methods): handle synchronous state updates.
+createAsyncThunk: handles asynchronous logic (API calls).
+extraReducers: handle async lifecycle or external reducers.
+Slices: bundle your reducers + actions + state together cleanly.
 
 14) react will have pure functions ?..
+In React, a pure function is a function that returns the same output for the same input (props/state) and does not cause side effects.
+That means — your React component should only depend on what’s passed to it (props, state) and not modify anything else outside of it.
+React.memo, PureComponent
 
 15) when to useRef hook ?..
+Tracking previous values
+Keeping mutable state without causing a re-render
+If you want to compare previous and current props or state.
+Unlike useState, updating useRef doesn’t trigger a re-render, which is useful for values that change frequently but don’t need to update the UI.
 
 16)event propogation ?.. -> 
-lexicalscope ?..
+Event propagation is the way events travel through the DOM when an event is triggered on an element. There are two main phases.
+a) Capturing Phase (Event Capture)
+b) Target Phase
+c) Bubbling Phase (Event Bubble)
 
-17) desctructuring ?..
+what is lexicalscope ?.. ->
+Lexical scope means that a function’s scope is determined by where it is declared, not where it is called.
+In other words, functions remember the variables from the environment in which they were created.
+Closures in JavaScript are based on lexical scoping
+
+17)what is object desctructuring ?.. 
+Object destructuring in JavaScript is a shortcut syntax to extract values from objects (or arrays) and assign them to variables in a cleaner and more readable way
 
 18) 
-mapDispatchtoprops
-MapStateTOprops
-mapPropsToValues
-getderivedstatefromProps ? ..
+| Function / Method          | Used In | Purpose                                         |
+| -------------------------- | ------- | ----------------------------------------------- |
+| `mapStateToProps`          | Redux   | Map Redux state to component props              |
+| `mapDispatchToProps`       | Redux   | Map Redux action dispatchers to component props |
+| `mapPropsToValues`         | Formik  | Initialize form values from component props     |
+| `getDerivedStateFromProps` | React   | Update component state based on prop changes    |
 
 
-react lazy loading ?..
-react.lazy.
+19) what is react lazy loading ?..
+React provides the React.lazy() function to dynamically import components.
+You also need to wrap the lazy-loaded component with a <Suspense> component to show a fallback (like a loader) while the component is being loaded.
 
-react code splitting ?.. 
+import React, { Suspense } from "react";
+
+// Lazy load the component
+const About = React.lazy(() => import("./About"));
+
+function App() {
+  return (
+    <div>
+      <h1>Welcome to My App</h1>
+      <Suspense fallback={<div>Loading...</div>}>
+        <About />
+      </Suspense>
+    </div>
+  );
+}
+
+export default App;
 
 
-what re react profilers , react portals , renderprops ?..
+React.lazy(() => import('./About')) → tells React to load About component only when it’s rendered.
+<Suspense fallback={...}> → provides a fallback UI while the lazy-loaded component is being fetched.
+
+20) what is code splitting ?.. 
+Code Splitting in React (or JavaScript in general) is a technique to split your application code into smaller 
+chunks so that only the necessary code is loaded initially, and the rest is loaded on demand.
+It is closely related to lazy loading but applies more broadly to bundling and delivery of JavaScript code.
+
+------- How it works ---------
+
+Normally, React apps bundle all JavaScript into a single large file.
+With code splitting, tools like Webpack or Vite split the code into multiple bundles, which are loaded only when needed.
+This reduces initial load time and improves performance.
+examples : 
+Route-based splitting: Load each route separately.
+
+
+21) what are react profilers , react portals , renderprops ?..
+1) React Profiler
+A tool to measure the performance of your React components.
+It helps identify which components render too often, and how long each render takes.
+Usage: Wrap a part of your component tree with <Profiler> and provide a callback to log performance data.
+Use case: Optimize slow components in large applications.
+
+2) React Portals
+Allow rendering a child component into a DOM node outside the parent hierarchy.
+Useful for modals, tooltips, and dropdowns where you don’t want CSS overflow or stacking issues.
+Benefit: Keeps modal/overlay UI separate from main DOM, solving styling & z-index issues.
+
+3) Render Props
+A pattern for sharing logic between components using a prop that is a function.
+The child function receives data or behavior and renders UI dynamically.
+Benefit: Reusable logic without inheritance, works well before hooks became standard.
 -------------------------------------------------------------------
 19) middleware : it allow to intercetp the changes.
 thunk : yes.
 saga :
+redux tool kit - > 
 
-20) redux tool kit - > 
 
-
-21) when we prefer to use context api vs redux.
+20) when we prefer to use context api vs redux.
 Small/medium app, few global values	Context API
 
 
-22) when to use redux state or global state ?..
+21) when to use redux state or global state ?..
 Large/complex app with multiple data flows	Redux
 Need minimal boilerplate but powerful global state	Zustand / Recoil (modern lightweight alternatives)
 
-23) Heavy async operations or API integrations	Redux + Thunk/Saga
+22) Heavy async operations or API integrations	Redux + Thunk/Saga
 
-24) global store (single source of store ) , reducers , slices , 
-slice and splice method ?..
-map and for each ?..
-name some array methods ?..
-debouncing and throttling ?..
+23) global store (single source of store ) , reducers , slices , slice and splice method ?..
+
+24) rest operator vs spread operator
+Purpose: Collects multiple elements into a single array or object.
+Purpose: Expands an array or object into individual elements.
+
+| Feature       | Rest (`...`)                                    | Spread (`...`)                                  |
+| ------------- | ----------------------------------------------- | ----------------------------------------------- |
+| Purpose       | Collect remaining elements into an array/object | Expand an array/object into individual elements |
+| Usage context | Function parameters, destructuring              | Arrays, objects, function calls                 |
+| Example       | `function sum(...nums)`                         | `const arr2 = [...arr1]`                        |
+| Output        | Array or object                                 | Individual values                               |
 
 
-25) useDispatch vs useSelector ?..
+25) map and for each ?..
+26) name some array methods ?..
 
-26) useEffect with depencency array ?..
+	push() → add element at the end
+	pop() → remove element from the end
+	shift() → remove element from the start
+	unshift() → add element at the start
+	splice() → add/remove elements at any position
+	sort() → sort array
+	reverse() → reverse array
 
-27) code :
+Non-mutating methods (return new array or value):
+	map() → transforms each element and returns a new array
+	filter() → returns a new array with elements passing a condition
+	reduce() → reduces array to a single value
+	forEach() → iterates over each element (doesn’t return new array)
+	slice() → returns a portion of the array
+	concat() → merges arrays
+	includes() → checks if value exists
+	find() → returns first element that matches condition
+	some() → checks if any element satisfies condition
+	every() → checks if all elements satisfy condition
+
+27) what is debouncing and throttling ?..
+
+Debouncing
+	Ensures a function is called only after a specified delay after the last event.
+	Useful for search input, autocomplete to reduce API calls.
+	Triggered once after user stops triggering the event.
+
+Throttling
+    Ensures a function is called at most once every specified interval.
+	Useful for scrolling, infinite scroll, or mouse move.	
+
+
+28) useDispatch vs useSelector vs useEffect with depencency array ?..
+
+useDispatch:
+	Hook from Redux to dispatch actions to the Redux store.
+	Used to trigger state changes in the store.
+
+useSelector:
+	Hook from Redux to read state from the Redux store.
+	Re-renders the component whenever the selected part of the state changes.
+
+useEffect with Dependency Array:
+	Hook from React used to run side effects (API calls, subscriptions, timers, DOM updates, etc.).
+	Dependency array controls when the effect runs.
+
+30) code :
 Increase the counter by clicking the button in react js example ?..
+	import React, { useState } from 'react';
+
+	const Counter = () => {
+	  const [count, setCount] = useState(0);
+
+	  const handleIncrement = () => {
+		setCount(count + 1);
+	  };
+
+	  return (
+		<div style={{ textAlign: 'center', marginTop: '50px' }}>
+		  <h1>Counter: {count}</h1>
+		  <button onClick={handleIncrement}>Increase</button>
+		</div>
+	  );
+	};
+
+	export default Counter;
 
 
-28) Shorts: 
+31) Shorts: 
 https://www.youtube.com/shorts/nD7mltpKwHA
 https://www.youtube.com/shorts/L0DWAVbdEaM
 https://www.youtube.com/watch?v=MN8QVG3aW1s
 
-29) ------ React functioanl based interview questions -------
+32) ------ React functioanl based interview questions -------
 
 https://www.youtube.com/watch?v=afoK26auCXQ&t=33s
 https://www.youtube.com/watch?v=qjUAAC1xnvI
@@ -222,14 +360,7 @@ css : flex and its properties
 7) flex box
 8) line item center
 9) align items center or vertically.
-
---------------------------- java script questions---------------------------------------
-java scipt:
-let vs var
-types of hosting.
-rest operator vs spread operator
-
-------------------------------------
+-------------------------------------------------------------------------------
 sql based questions:
 1) seconf maximum salary in an employee table
 2) having and group by clause

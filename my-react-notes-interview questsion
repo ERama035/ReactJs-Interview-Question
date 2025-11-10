@@ -345,11 +345,51 @@ https://www.youtube.com/shorts/L0DWAVbdEaM
 https://www.youtube.com/watch?v=MN8QVG3aW1s
 
 32) ------ React functioanl based interview questions -------
+https://www.youtube.com/watch?v=afoK26auCXQ&t=33s
 33) Your React app suddenly becomes slow after adding new features. How do you find and fix the issue?
+chrome deve tools , performace tab, 
+react dev tools -> unnecessary rerenders 
+react.memeo and unnecessary call backs.
+virtulaztion : it loads the contenct for infinte scrolls
+avoid inline functions / objects which helps to rerenders the children 
+
 34) How do you prevent a login page from being accessible after the user is logged in?
+we have to use protected routes using logged in 
+contect-redux -> is authenticated = false or true
+Router -> login related routes based on the conditions which is linked to state.
+
 35) How do yồu handle API errors gracefully in the UI?
+technicall error -> user friendly messages --> something went wrong.
+always use try/catch and asynch and wait
+use hooks -> setError or Error and we can make use of retry or error boundraies.
+categories of error -> network 
+server side errorunauthorized error
+
 36) A component is fetching the same data multiple times unnecessarily. How do you fix it?
+Reach query for caching the daa.
+to store the fetch data in contect / redux help for rendering the data multiple times.
+useMemo -> based on the calculations it will load only 1 time or based on the depndencies.
+and save it 
 37) How do you optimize bundle size in a large React app?
+code splitting with react lazy, suspense.
+tree shaking with webpack (which remove the unused imports)
+dynamic imports -> main chunk.
+4) COmpress Assets -> images, fonts.
+5) cache -> users device.
+------------------------------------------------------------------------------------------
+https://www.youtube.com/watch?v=dAHTXKDsrZ8
+
+33) What is React Fiber and how does it differ from the old reconciliation algorithm  
+34) How does React determine when to rerender a component  
+35) What are concurrent features in React and how do they help  
+36) Explain React’s batching behavior and what changed in React 18  
+37) What is the difference between useMemo and useCallback and when should you not use them  
+38) How does Suspense work in React and what are some real use cases beyond lazy loading  
+39) What is useImperativeHandle in React and when should it be used  
+40) How do you optimize large lists in React  
+41) How does useRef differ from useState  
+42) How does React handle hydration in SSR and what problems can arise  
+
 
 --------------------------- css questions---------------------------------------
 css : flex and its properties

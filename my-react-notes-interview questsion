@@ -28,6 +28,7 @@ Arrow Functions	Short, lexically-scoped functions
 let, const	Block-scoped variable declarations
 Default Parameters	Function parameters with default values
 Modules	Native import/export
+tempalate literal strings
 
 
 4) what is event loop in java script with precedence ?..
@@ -87,7 +88,7 @@ for-each vs for-in  ?.. both are for iterating the data-structure, a)for-each is
 -> Is A popular Third-party Javascript library for making http requests, used for larger applications, and returns Promises.
 
 
-what is shallow copy vs deep copy ?..
+13) what is shallow copy vs deep copy ?..
     shallow copy:
 	const original = { a: 1, b: { c: 2 } };
     const shallowCopy = { ...original };
@@ -95,12 +96,11 @@ what is shallow copy vs deep copy ?..
 	    const original = { a: 1, b: { c: 2 } };
     const shallowCopy = Object.assign({}, original);
 
-map vs reduce ?..
+14) map vs reduce ?..
 -> use when you want to transform to each element and get an new array -> map -> transform each element 
 -> use when you want to combine all elements into a single value -> reduce -> aggregate/combine elements.
 
------------------------------------------------------------------
-react 
+-----------------------------react------------------------------------
 1) functional hooks: with number of paramaters.
 usestate, use effect, useselector, usereducer, usememo , usecallback, usecontext, useref, userIMperativehandle, uselayoutEffect, useDebugValue
 
@@ -117,18 +117,15 @@ order: constructor , componentDidmount, ComponentDidupdate, CompnentUnmounting
 		console.log('count is 5 or more');
 	},[count]);
 
-
-
-
 7) pure components ?.. 
-1) use React.PureComponent
-2) A Pure Component in React only re-renders when its props or state change, thanks to shallow comparison, helping improve performance and efficiency.
+8) use React.PureComponent
+9) A Pure Component in React only re-renders when its props or state change, thanks to shallow comparison, helping improve performance and efficiency.
 
-8) what are contollered and not controlledcomponent ?..
+10) what are contollered and not controlledcomponent ?..
 Controlled -> React Manages the avlues via state
 UnControlled
 
-9) hoc components ?..
+11) hoc components ?..
 A Higher-Order Component (HOC) in React is a function that takes a component/function 
 and returns a new component with extra capabilities, making it easy to share logic  and state, props etc 
 and features across your app.
@@ -139,17 +136,25 @@ withRouter	-> Injects router props	react-router-dom v5
 withTranslation -> 	Injects translation functions	react-i18next
 withTheme	-> Injects theme props	styled-components, MUI
 
--------------------------------------------------------------------
-redux: 
+12) redux: 
 reducer : takes an action (type), state 
     and dispatch that actionwe get the result.
 	use selector we get the updated value.
 	
-redux: list of methods in reducers	
+13) redux: list of methods in reducers	
 slices : asynch, 
 reducer : 
 
+14) react will have pure functions ?..
 
+15) when to useRef hook ?..
+
+16)event propogation ?.. -> 
+lexicalscope ?..
+
+17) desctructuring ?..
+
+18) 
 mapDispatchtoprops
 MapStateTOprops
 mapPropsToValues
@@ -162,12 +167,61 @@ react.lazy.
 react code splitting ?.. 
 
 
-what re react profilers , react portals , renderprops , 
+what re react profilers , react portals , renderprops ?..
+-------------------------------------------------------------------
+19) middleware : it allow to intercetp the changes.
+thunk : yes.
+saga :
 
-react will have pure functions ?..
+20) redux tool kit - > 
 
 
-when to useRef hook ?..
+21) when we prefer to use context api vs redux.
+Small/medium app, few global values	Context API
+
+
+22) when to use redux state or global state ?..
+Large/complex app with multiple data flows	Redux
+Need minimal boilerplate but powerful global state	Zustand / Recoil (modern lightweight alternatives)
+
+23) Heavy async operations or API integrations	Redux + Thunk/Saga
+
+24) global store (single source of store ) , reducers , slices , 
+slice and splice method ?..
+map and for each ?..
+name some array methods ?..
+debouncing and throttling ?..
+
+
+25) useDispatch vs useSelector ?..
+
+26) useEffect with depencency array ?..
+
+27) code :
+Increase the counter by clicking the button in react js example ?..
+
+
+28) Shorts: 
+https://www.youtube.com/shorts/nD7mltpKwHA
+https://www.youtube.com/shorts/L0DWAVbdEaM
+https://www.youtube.com/watch?v=MN8QVG3aW1s
+
+29) ------ React functioanl based interview questions -------
+
+https://www.youtube.com/watch?v=afoK26auCXQ&t=33s
+https://www.youtube.com/watch?v=qjUAAC1xnvI
+
+--------------------------- css questions---------------------------------------
+css : flex and its properties
+1) html : list of meta tags, semantic
+2) box model
+3) positioning and relative
+4) css based questions ?.
+5) Media quaries.
+6) css box model
+7) flex box
+8) line item center
+9) align items center or vertically.
 
 --------------------------- java script questions---------------------------------------
 java scipt:
@@ -175,39 +229,9 @@ let vs var
 types of hosting.
 rest operator vs spread operator
 
--------------------------------------------------------------------
-middleware : it allow to intercetp the changes.
-thunk : yes.
-saga :
-
-1) redux tool kit - > 
-
-
-when we prefer to use context api vs redux.
-
-when to use redux state or global state ?..
-
-global store (single source of store ) , reducers , 
-
-useDispatch vs useSelector ?..
-
-
-useEffect with depencency array ?..
-
-------------SQl bases Questions ------------------------
+------------------------------------
+sql based questions:
 1) seconf maximum salary in an employee table
 2) having and group by clause
 	
---------------------------- css questions---------------------------------------
-html : list of meta tags, semantic
-
-css : flex and its properties
-1) box model
-2) positioning and relative
-
---------------------------React js local practise ---------------------------
-
-react hooks with firebase :
-https://www.bezkoder.com/react-hooks-firestore/
-redux tool kit with RDBMS:
-https://www.bezkoder.com/redux-toolkit-example-crud/
+	

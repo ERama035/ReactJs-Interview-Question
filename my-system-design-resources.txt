@@ -3,3 +3,8 @@ Questions with examples : https://www.interviewbit.com/system-design-interview-q
 
 Answers: https://github.com/ERama035/awesome-system-design-resources
 
+
+1) design a tiny url
+2) design an payment gateway
+3) desing an cache ?..
+4) design an authentication service ?..

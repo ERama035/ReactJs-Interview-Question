@@ -1,0 +1,76 @@
+---------------------------------------------------------java 8----------------------------------------------------------------
+97 . Is try without catch and finally allowed?
+String imuttability ?..
+
+
+exceptions :
+what is try with resource: 
+100 . What is the difference between checked exceptions and unchecked exceptions?
+104 . How do you create a custom exception?
+106 . Can you explain about try with resources?
+107 . How does try with resources work?
+108 . Can you explain a few exception handling best practices?
+
+garbage collection:
+Can you explain garbage collection with an example?
+java garbage collection mechanisums ?..
+
+data structures: 
+hashmap vs hash set vs concurrenthashmap
+synchronization and its blocks ?..
+Internal working of hashmap and hashset 
+difference between hasmap and hashset?..
+1) difference between hashmap and hastable.
+2) Asynch Hashmap vs Asynch hashTable.
+
+
+streams :
+208 . What is functional programming?
+210 . What is a stream?
+212 . What are intermediate, terminal operations in streams?
+213 . What are method references?
+214 . What are lambda expressions?
+216 . Can you explain the relationship between lambda expression and functional interfaces?
+217 . What is a predicate?
+
+keywords and interfaces :
+difference between volaitile and transient keywords
+comparable and caomparator  interface ?..
+purpose of finalize and finalize method ?..
+what is race condition ?..
+
+scenario based:
+java default method and which scenarios we have to use vs interface ?..
+java lambda functions and functional interface  and collection apis ?..
+spring boot consuming the file based parsing with different types ?..
+java put vs patch in rest apis ?.. 
+
+
+
+---------------------------------------------------------java 17----------------------------------------------------------------
+features : sealabed classes ?..
+
+
+
+-----------------------------------------------------------
+spring :
+spring boot and its annonations ?..
+difference between @qualifier ?..
+
+kafka :
+how to implement idempotency in kafka in spring boot
+
+kafka vs rabbit mq:
+https://www.youtube.com/watch?v=w8xWTIFU4C8
+
+
+-----------------------------------------------------------
+sql :
+------------------------
+Query of inner join
+
+
+react hooks with firebase :
+https://www.bezkoder.com/react-hooks-firestore/
+redux tool kit with RDBMS:
+https://www.bezkoder.com/redux-toolkit-example-crud/

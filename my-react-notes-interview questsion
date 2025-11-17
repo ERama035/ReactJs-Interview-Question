@@ -390,8 +390,14 @@ https://www.youtube.com/watch?v=dAHTXKDsrZ8
 41) How does useRef differ from useState  
 42) How does React handle hydration in SSR and what problems can arise  
 
+-----------------------react hooks with firebase : -----------------------------------
+https://www.bezkoder.com/react-hooks-firestore/
+redux tool kit with RDBMS:
+https://www.bezkoder.com/redux-toolkit-example-crud/
 
---------------------------- css questions---------------------------------------
+
+
+--------------------------- css questions---------------------------------------------
 css : flex and its properties
 1) html : list of meta tags, semantic
 2) box model

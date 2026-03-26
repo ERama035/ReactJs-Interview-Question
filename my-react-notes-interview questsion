@@ -112,10 +112,11 @@ order: constructor , componentDidmount, ComponentDidupdate, CompnentUnmounting
 5) React is declarative js ?.. yes
 
 6) Scenario : without using the ifelse statement , how to use useEffect based on the count.
-	useEffect(()=>{
-		if(count < 5) return;
-		console.log('count is 5 or more');
-	},[count]);
+
+useEffect(() => {
+  console.log('count is 5 or more');
+}, [count >= 5]);
+
 
 7) pure components ?.. 
 8) use React.PureComponent
